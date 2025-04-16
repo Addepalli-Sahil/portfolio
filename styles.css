@@ -1,0 +1,463 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    color: #222;
+    scroll-behavior: smooth;
+  }
+  
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #f39c12;
+    width: 0%;
+    z-index: 2000;
+    transition: width 0.25s ease-out;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: #222;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    z-index: 2;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  .nav-social-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .nav-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .nav-social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.15);
+  }
+  
+  .nav-social-icons img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%) brightness(1.2);
+    transition: filter 0.3s;
+  }
+  
+  .nav-social-icons a:hover img {
+    filter: grayscale(0%);
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #000428, #004e92);
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .animated-name {
+    color: #f39c12;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #e67e22;
+  }
+  
+  .about {
+    padding: 60px 10%;
+    background: #fff;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .about-image {
+    max-width: 250px;
+    border-radius: 20px;
+    display: block;
+  }
+  
+  .about-text {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .about-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-text h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #f39c12;
+  }
+  
+  .about-text p,
+  .about-text li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .skills {
+    padding: 60px 10%;
+    background-color: #f9f9f9;
+  }
+  
+  .skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .skill-category {
+    flex: 1 1 300px;
+  }
+  
+  .skill-category h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .skill-tags span {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .certificates {
+    padding: 60px 5%;
+    background: #fff;
+  }
+  
+  .cert-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .cert-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .cert-card {
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1 1 200px;
+    max-width: 220px;
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cert-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .cert-card h3 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #222;
+  }
+  
+  .cert-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .contact {
+    padding: 60px 10%;
+    background: #f4f4f4;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-subtext {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: #e67e22;
+  }
+  
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+  }
+  
+  .modal.show {
+    display: flex;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    animation: fadeInUp 0.5s ease;
+  }
+  
+  .modal-content img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  
+  #closeModalBtn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    } 
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .cert-card {
+      max-width: 100%;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+    }
+  }
+
+  @keyframes colorCycle {
+    0%   { color: #f39c12; }
+    20%  { color: #e74c3c; }
+    40%  { color: #8e44ad; }
+    60%  { color: #3498db; }
+    80%  { color: #2ecc71; }
+    100% { color: #f39c12; }
+  }
+  
+
+  .animated-name {
+    animation: colorCycle 10s linear infinite;
+    transition: color 2s ease-in-out;
+  }
+
+  
+  .tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    height: 1.8em;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .fade-span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  .tagline-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .tagline-text.visible {
+    opacity: 100;
+  }
+  
