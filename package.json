@@ -1,0 +1,38 @@
+{
+  "name": "sahil-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Portfolio Website for Sahil Addepalli",
+  "main": "index.html",
+  "dependencies": {
+    "@types/react": "^19.1.8",
+    "aos": "^2.3.4",
+    "font-awesome": "^4.7.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "start": "live-server --port=3000",
+    "dev": "live-server --port=3000 --watch=.",
+    "format": "prettier --write .",
+    "lint": "eslint *.js",
+    "build": "echo 'Building portfolio...'",
+    "deploy": "echo 'Deploying portfolio...'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "react",
+    "python",
+    "frontend"
+  ],
+  "author": "Sahil Addepalli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Addepalli-Sahil/portfolio"
+  }
+}

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Addepalli - Software Developer Portfolio</title>
+    <meta name="description" content="Sahil Addepalli - Passionate Software Developer specializing in Python, React, and modern web technologies. View my projects and certifications.">
+    <meta name="keywords" content="Sahil Addepalli, Software Developer, Python, React, Portfolio, Web Development">
+    <meta property="og:title" content="Sahil Addepalli - Software Developer Portfolio">
+    <meta property="og:description" content="Passionate Software Developer specializing in Python, React, and modern web technologies">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+<!-- Font Awesome - Working Version -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-indicator"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fa fa-code"></i>
+                Sahil Addepalli
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="#certifications" class="nav-link"><i class="fa fa-certificate"></i> Certifications</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fa fa-folder"></i> Projects</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+            
+            <div class="nav-social">
+                <a href="https://github.com/Addepalli-Sahil" class="social-icon" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sahil-addepalli" class="social-icon" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fa fa-moon-o"></i>
+                </button>
+
+            </div>
+            
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background-animation"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-greeting text-reveal">Hello, I'm</span>
+                <h1 class="hero-name">Sahil Addepalli</h1>
+                <h2 class="hero-title text-reveal">Software Developer</h2>
+                <p class="hero-description text-reveal">
+                    Passionate about creating innovative solutions with Python, React, and modern web technologies. 
+                    I love building automated solutions and modern web applications that solve real-world problems.
+                    Currently expanding my expertise in full-stack development and data analytics.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-magnetic">
+                        <i class="fa fa-eye"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-magnetic">
+                        <i class="fa fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="profile-card glass-card">
+                <div class="profile-img">
+                    <img src="images/sahil.png" alt="Sahil Addepalli Profile Picture">
+                </div>
+                <div class="floating-icons">
+                  <div class="floating-icon" style="--delay: 0s;"><i class="fa fa-code"></i></div>
+                  <div class="floating-icon" style="--delay: 1s;"><i class="fa fa-cog"></i></div>
+                  <div class="floating-icon" style="--delay: 2s;"><i class="fa fa-laptop"></i></div>
+                  <div class="floating-icon" style="--delay: 3s;"><i class="fa fa-database"></i></div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Floating particles -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-layered">
+        <div class="container">
+            <h2><i class="fa fa-user"></i> About Me</h2>
+           <div class="about-text">
+    <p class="fade-in">
+        I'm a dedicated software developer with a passion for creating efficient, scalable solutions that solve real-world problems. My journey in technology began with a curiosity about how things work and has evolved into a comprehensive skill set spanning web development, data analytics, and cybersecurity. I believe in the power of continuous learning and staying updated with the latest industry trends and best practices.
+    </p>
+    <p class="fade-in">
+        With hands-on experience in Python, React, TypeScript, and various development tools, I enjoy tackling complex challenges and turning innovative ideas into reality. My approach combines technical expertise with creative problem-solving, whether I'm building automated resume builders, developing AI-powered code review systems, or creating data visualization dashboards. I'm particularly passionate about automation and finding ways to streamline processes through intelligent software solutions.
+    </p>
+    <p class="fade-in">
+        Through my professional certifications from industry leaders like Accenture, Goldman Sachs, IBM, Meta, Red Bull, and Electronic Arts, I've gained practical experience in software engineering, cybersecurity, data analytics, frontend development, and sales analytics. These experiences have shaped my understanding of enterprise-level development practices and given me insights into how technology drives business success across different industries.
+    </p>
+</div>
+
+            
+            <div class="about-stats">
+                <div class="stat-item glass-card" data-count="6">
+                    <i class="fa fa-certificate"></i>
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-item glass-card" data-count="10">
+                    <i class="fa fa-folder"></i>
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item glass-card" data-count="5">
+                    <i class="fa fa-code"></i>
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-item glass-card" data-count="1000">
+                    <i class="fa fa-clock-o"></i>
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Hours Coding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2><i class="fa fa-cogs"></i> Technical Skills</h2>
+        <div class="skills-grid-horizontal">
+            <div class="skill-category">
+                <h3><i class="fa fa-code"></i> Programming Languages</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <i class="fa fa-code"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-code"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-code"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-code"></i>
+                        <span>C++</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><i class="fa fa-laptop"></i> Frameworks & Libraries</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <i class="fa fa-cog"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-server"></i>
+                        <span>Flask</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-cog"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-cog"></i>
+                        <span>Express.js</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><i class="fa fa-wrench"></i> Tools & Technologies</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <i class="fa fa-git"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-database"></i>
+                        <span>Databases</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-terminal"></i>
+                        <span>Command Line</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><i class="fa fa-star"></i> Specializations</h3><br>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <i class="fa fa-bar-chart"></i>
+                        
+                        <span>Data Analytics</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-shield"></i>
+                        <span>Cybersecurity</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-mobile"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-cogs"></i>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+   <!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <h2><i class="fa fa-certificate"></i> Professional Certifications</h2>
+        <div class="certificates-carousel">
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Certificate 1: Accenture -->
+                    <div class="cert-wrapper">
+                        <div class="cert-card glass-card">
+                            <div class="cert-card-inner">
+                                <div class="cert-front">
+                                    <div class="cert-icon">
+                                        <img src="images/accenture-thumbnail.jpg" alt="Accenture" class="cert-company-logo">
+                                    </div>
+                                    <h3>Software Engineering</h3>
+                                    <p class="cert-issuer">Accenture via Forage</p>
+                                    <div class="cert-details">
+                                        <p class="cert-description">Completed comprehensive software engineering simulation covering architecture design, security implementation, programming best practices, testing methodologies, and agile development processes.</p>
+                                        <div class="cert-achievements">
+                                            <span><i class="fa fa-check"></i> Designed system architecture</span>
+                                            <span><i class="fa fa-check"></i> Implemented security protocols</span>
+                                            <span><i class="fa fa-check"></i> Applied agile methodologies</span>
+                                        </div>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <span>Architecture</span>
+                                        <span>Security</span>
+                                        <span>Programming</span>
+                                        <span>Testing</span>
+                                        <span>Agile</span>
+                                    </div>
+                                    <div class="cert-actions">
+                                        <a href="certificates/accenture-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-back">
+                                    <h3>Key Learnings</h3>
+                                    <ul>
+                                        <li>System Architecture Design</li>
+                                        <li>Security Implementation</li>
+                                        <li>Agile Development</li>
+                                        <li>Testing Methodologies</li>
+                                    </ul>
+                                    <div class="cert-actions">
+                                        <a href="certificates/accenture-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Certificate 2: Goldman Sachs -->
+                    <div class="cert-wrapper">
+                        <div class="cert-card glass-card">
+                            <div class="cert-card-inner">
+                                <div class="cert-front">
+                                    <div class="cert-icon">
+                                        <img src="images/goldman-thumbnail.jpg" alt="Goldman Sachs" class="cert-company-logo">
+                                    </div>
+                                    <h3>Cybersecurity</h3>
+                                    <p class="cert-issuer">Goldman Sachs via Forage</p>
+                                    <div class="cert-details">
+                                        <p class="cert-description">Gained hands-on experience in cybersecurity fundamentals including password security analysis, database vulnerability assessment, and security breach investigation techniques.</p>
+                                        <div class="cert-achievements">
+                                            <span><i class="fa fa-check"></i> Analyzed password security</span>
+                                            <span><i class="fa fa-check"></i> Investigated security breaches</span>
+                                            <span><i class="fa fa-check"></i> Assessed database vulnerabilities</span>
+                                        </div>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <span>Password Security</span>
+                                        <span>Database Analysis</span>
+                                    </div>
+                                    <div class="cert-actions">
+                                        <a href="certificates/goldman-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-back">
+                                    <h3>Security Expertise</h3>
+                                    <ul>
+                                        <li>Password Analysis</li>
+                                        <li>Vulnerability Assessment</li>
+                                        <li>Security Investigations</li>
+                                        <li>Risk Management</li>
+                                    </ul>
+                                    <div class="cert-actions">
+                                        <br>
+                                        <a href="certificates/goldman-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Certificate 3: IBM -->
+                    <div class="cert-wrapper">
+                        <div class="cert-card glass-card">
+                            <div class="cert-card-inner">
+                                <div class="cert-front">
+                                    <div class="cert-icon">
+                                        <img src="images/ibm-thumbnail.png" alt="IBM" class="cert-company-logo">
+                                    </div>
+                                    <h3>Data Analytics</h3>
+                                    <p class="cert-issuer">IBM SkillsBuild</p>
+                                    <div class="cert-details">
+                                        <p class="cert-description">Mastered data analytics fundamentals including data collection, analysis techniques, visualization tools, and statistical interpretation for business decision-making.</p>
+                                        <div class="cert-achievements">
+                                            <span><i class="fa fa-check"></i> Performed data analysis</span>
+                                            <span><i class="fa fa-check"></i> Created visualizations</span>
+                                            <span><i class="fa fa-check"></i> Applied statistical methods</span>
+                                        </div>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <span>Data Analysis</span>
+                                        <span>Data Visualization</span>
+                                        <span>Getting Started with Data</span>
+                                    </div>
+                                    <div class="cert-actions">
+                                        <a href="certificates/ibm-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-back">
+                                    <h3>Analytics Skills</h3>
+                                    <ul>
+                                        <li>Data Collection</li>
+                                        <li>Statistical Analysis</li>
+                                        <li>Data Visualization</li>
+                                        <li>Business Intelligence</li>
+                                    </ul>
+                                    <div class="cert-actions">
+                                        <a href="certificates/ibm-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Certificate 4: Meta/Coursera -->
+                    <div class="cert-wrapper">
+                        <div class="cert-card glass-card">
+                            <div class="cert-card-inner">
+                                <div class="cert-front">
+                                    <div class="cert-icon">
+                                        <img src="images/coursera-thumbnail.jpg" alt="Meta Coursera" class="cert-company-logo">
+                                    </div>
+                                    <h3>Frontend Development</h3>
+                                    <p class="cert-issuer">Meta via Coursera</p>
+                                    <div class="cert-details">
+                                        <p class="cert-description">Completed comprehensive frontend development program covering React development, modern JavaScript, HTML/CSS best practices, and responsive web design principles.</p>
+                                        <div class="cert-achievements">
+                                            <span><i class="fa fa-check"></i> Built React applications</span>
+                                            <span><i class="fa fa-check"></i> Mastered modern JavaScript</span>
+                                            <span><i class="fa fa-check"></i> Implemented responsive designs</span>
+                                        </div>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <span>React</span>
+                                        <span>HTML/CSS</span>
+                                        <span>JavaScript</span>
+                                        <span>Frontend Development</span>
+                                    </div>
+                                    <div class="cert-actions">
+                                        <a href="certificates/coursera-frontend-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-back">
+                                    <h3>Frontend Mastery</h3>
+                                    <ul>
+                                        <li>React Development</li>
+                                        <li>Modern JavaScript</li>
+                                        <li>Responsive Design</li>
+                                        <li>UI/UX Best Practices</li>
+                                    </ul>
+                                    <div class="cert-actions">
+                                        <a href="certificates/coursera-frontend-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Certificate 5: Red Bull -->
+                    <div class="cert-wrapper">
+                        <div class="cert-card glass-card">
+                            <div class="cert-card-inner">
+                                <div class="cert-front">
+                                    <div class="cert-icon">
+                                        <img src="images/redbull-thumbnail.jpg" alt="Red Bull" class="cert-company-logo">
+                                    </div>
+                                    <h3>Sales Analytics</h3>
+                                    <p class="cert-issuer">Red Bull via Forage</p>
+                                    <div class="cert-details">
+                                        <p class="cert-description">Developed expertise in sales analytics through practical experience with account data analysis, sales objection handling, and on-premise sales strategy development.</p>
+                                        <div class="cert-achievements">
+                                            <span><i class="fa fa-check"></i> Analyzed sales data</span>
+                                            <span><i class="fa fa-check"></i> Developed sales strategies</span>
+                                            <span><i class="fa fa-check"></i> Handled customer objections</span>
+                                        </div>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <span>Account Data Analysis</span>
+                                        <span>Sales Objections</span>
+                                        <span>On-Premise Sales</span>
+                                    </div>
+                                    <div class="cert-actions">
+                                        <a href="certificates/redbull-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-back">
+                                    <h3>Sales Analytics</h3>
+                                    <ul>
+                                        <li>Data Analysis</li>
+                                        <li>Sales Strategy</li>
+                                        <li>Customer Relations</li>
+                                        <li>Performance Metrics</li>
+                                    </ul>
+                                    <div class="cert-actions">
+                                        <a href="certificates/redbull-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Certificate 6: Electronic Arts -->
+                    <div class="cert-wrapper">
+                        <div class="cert-card glass-card">
+                            <div class="cert-card-inner">
+                                <div class="cert-front">
+                                    <div class="cert-icon">
+                                        <img src="images/ea-thumbnail.jpg" alt="Electronic Arts" class="cert-company-logo">
+                                    </div>
+                                    <h3>Software Engineering</h3>
+                                    <p class="cert-issuer">Electronic Arts via Forage</p>
+                                    <div class="cert-details">
+                                        <p class="cert-description">Gained practical game development experience through feature proposal creation, game object class implementation, inventory system design, and live bug fixing in production environments.</p>
+                                        <div class="cert-achievements">
+                                            <span><i class="fa fa-check"></i> Proposed new features</span>
+                                            <span><i class="fa fa-check"></i> Implemented game objects</span>
+                                            <span><i class="fa fa-check"></i> Fixed production bugs</span>
+                                        </div>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <span>Feature Proposal</span>
+                                        <span>Game Object Class</span>
+                                        <span>Inventory System</span>
+                                        <span>Live Bugfix</span>
+                                    </div>
+                                    <div class="cert-actions">
+                                        <a href="certificates/ea-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-back">
+                                    <h3>Game Development</h3>
+                                    <ul>
+                                        <li>Feature Development</li>
+                                        <li>Object-Oriented Programming</li>
+                                        <li>System Design</li>
+                                        <li>Production Debugging</li>
+                                    </ul>
+                                    <div class="cert-actions">
+                                        <a href="certificates/ea-certificate.pdf" class="cert-btn" target="_blank">
+                                            <i class="fa fa-external-link"></i> View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2><i class="fa fa-folder"></i> Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card glass-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <a href="https://github.com/Addepalli-Sahil/AutomatedResumeBuilder" class="github-link" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                <div class="project-content">
+                    <h3>Automated Resume Builder</h3>
+                    <p>A comprehensive Python Flask application that transforms user input into professionally formatted PDF resumes. Features user-friendly HTML forms, Jinja2 templating, clean modern design, and optional PDF generation.</p>
+                    <br>                 
+                    <div class="project-tech">
+                        <span class="tech-tag python"><i class="fa fa-code"></i> Python</span>
+                        <span class="tech-tag flask"><i class="fa fa-server"></i> Flask</span>
+                        <span class="tech-tag html"><i class="fa fa-html5"></i> HTML5</span>
+                        <span class="tech-tag css"><i class="fa fa-css3"></i> CSS3</span>
+                        <span class="tech-tag pdf"><i class="fa fa-file-pdf-o"></i> PDF Generation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fa fa-cog"></i>
+                    </div>
+                    <a href="https://github.com/Addepalli-Sahil/AiCodeReviewer" class="github-link" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                <div class="project-content">
+                    <h3>AI Code Reviewer</h3>
+                    <p>An intelligent GitHub Action that leverages OpenAI's GPT-4 API to provide automated code reviews and suggestions on pull requests. Streamlines development workflow with AI-powered insights.</p>
+                    <br><br>                 
+                    <div class="project-tech">
+                        <span class="tech-tag ai"><i class="fa fa-cog"></i> AI/GPT-4</span>
+                        <span class="tech-tag api"><i class="fa fa-github"></i> GitHub API</span>
+                        <span class="tech-tag automation"><i class="fa fa-cogs"></i> Automation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <a href="https://github.com/Addepalli-Sahil/offerletter" class="github-link" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                <div class="project-content">
+                    <h3>Offer Letter Generator</h3>
+                    <p>A professional document generation system for creating standardized employee offer letters with customizable templates. Simplifies HR processes with automated document creation.</p>
+                    <br><br>
+                    <div class="project-tech">
+                        <span class="tech-tag html"><i class="fa fa-html5"></i> HTML5</span>
+                        <span class="tech-tag css"><i class="fa fa-css3"></i> CSS3</span>
+                        <span class="tech-tag js"><i class="fa fa-code"></i> JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2><i class="fa fa-envelope"></i> Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>sahil.addepalli@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fa fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>github.com/Addepalli-Sahil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fa fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/sahil-addepalli</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <form class="contact-form glass-card" action="https://formspree.io/f/myzkrdkv" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-envelope"></i>
+                            <input type="email" name="_replyto" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-tag"></i>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-comment"></i>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-magnetic">
+                        <i class="fa fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Sahil Addepalli. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Addepalli-Sahil" class="footer-social-link" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sahil-addepalli" class="footer-social-link" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:sahil.addepalli@gmail.com" class="footer-social-link">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
