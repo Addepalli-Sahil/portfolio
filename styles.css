@@ -1090,10 +1090,11 @@ body.dark-mode .cert-skills span:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
+
 
 .project-card {
     border-radius: 20px;
@@ -1678,3 +1679,4 @@ body.dark-mode .cert-btn:hover {
         align-items: center;
     }
 }
+    
