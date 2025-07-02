@@ -1102,9 +1102,8 @@ body.dark-mode .cert-skills span:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 500px;
-    max-height: 500px;
-    min-width: 0; /* ADDED: Prevents cards from growing too wide */
+    height: 500px;
+    min-width: 0;
 }
 
 .project-card:hover {
@@ -1153,11 +1152,12 @@ body.dark-mode .cert-skills span:hover {
 }
 
 .project-content {
-    padding: 1rem;
+    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    min-height: 0;
 }
 
 .project-content h3 {
@@ -1170,20 +1170,19 @@ body.dark-mode .cert-skills span:hover {
 .project-content p {
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 0.2rem;
-    flex-grow: 0;
-    font-size: 0.85rem; /* UPDATED: Reduced from 0.9rem to 0.85rem */
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    font-size: 0.85rem;
 }
 
 .project-tech {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to next line */
-    overflow-x: auto; /* Allow horizontal scroll if overflow */
-    gap: 0.5rem;
-    white-space: nowrap; /* Prevent text wrapping inside tags */
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) transparent;
-    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+    margin-top: auto;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .project-tech::-webkit-scrollbar {
@@ -1200,14 +1199,14 @@ body.dark-mode .cert-skills span:hover {
 }
 
 .tech-tag {
-    padding: 0.3rem 0.6rem; /* UPDATED: Reduced padding from 0.4rem 0.8rem */
-    border-radius: 15px;
-    font-size: 0.7rem; /* UPDATED: Reduced from 0.75rem to 0.7rem */
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.65rem;
     font-weight: 600;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    flex-shrink: 0; /* ADDED: Prevents tags from shrinking */
+    white-space: nowrap;
 }
 
 .tech-tag.python { background: #3776ab; color: white; }
