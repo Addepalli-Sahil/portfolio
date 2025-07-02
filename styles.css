@@ -1176,11 +1176,27 @@ body.dark-mode .cert-skills span:hover {
 
 .project-tech {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;        /* Prevent wrapping to next line */
+    overflow-x: auto;         /* Allow horizontal scroll if overflow */
     gap: 0.5rem;
-    flex-shrink: 0;
-    margin-top: 0.5rem;
+    white-space: nowrap;      /* Prevent text wrapping inside tags */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
 }
+
+.project-tech::-webkit-scrollbar {
+    height: 6px;
+}
+
+.project-tech::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.project-tech::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 
 .tech-tag {
     padding: 0.4rem 0.8rem;
