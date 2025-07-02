@@ -31,10 +31,11 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
+
 
 /* Custom Cursor */
 .custom-cursor {
@@ -1090,10 +1091,11 @@ body.dark-mode .cert-skills span:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
     gap: 2rem;
     margin-top: 2rem;
 }
+
 
 .project-card {
     border-radius: 20px;
