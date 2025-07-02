@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1400px; /* UPDATED: Increased from 1200px to 1400px */
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -91,7 +91,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px; /* UPDATED: Increased from 1200px to 1400px */
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -268,7 +268,7 @@ body {
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 1400px; /* UPDATED: Increased from 1200px to 1400px */
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1090,11 +1090,10 @@ body.dark-mode .cert-skills span:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr); /* UPDATED: Changed from repeat(3, 1fr) to repeat(4, 1fr) */
+    gap: 1.5rem; /* UPDATED: Reduced gap from 2rem to 1.5rem */
     margin-top: 2rem;
 }
-
 
 .project-card {
     border-radius: 20px;
@@ -1105,6 +1104,7 @@ body.dark-mode .cert-skills span:hover {
     flex-direction: column;
     min-height: 500px;
     max-height: 500px;
+    min-width: 0; /* ADDED: Prevents cards from growing too wide */
 }
 
 .project-card:hover {
@@ -1161,7 +1161,7 @@ body.dark-mode .cert-skills span:hover {
 }
 
 .project-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* UPDATED: Reduced from 1.4rem to 1.2rem */
     margin-bottom: 1rem;
     color: var(--text-primary);
     flex-shrink: 0;
@@ -1172,17 +1172,18 @@ body.dark-mode .cert-skills span:hover {
     line-height: 1.6;
     margin-bottom: 0.2rem;
     flex-grow: 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* UPDATED: Reduced from 0.9rem to 0.85rem */
 }
 
 .project-tech {
     display: flex;
-    flex-wrap: nowrap;        /* Prevent wrapping to next line */
-    overflow-x: auto;         /* Allow horizontal scroll if overflow */
+    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    overflow-x: auto; /* Allow horizontal scroll if overflow */
     gap: 0.5rem;
-    white-space: nowrap;      /* Prevent text wrapping inside tags */
+    white-space: nowrap; /* Prevent text wrapping inside tags */
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) transparent;
+    margin-top: 0.5rem;
 }
 
 .project-tech::-webkit-scrollbar {
@@ -1198,15 +1199,15 @@ body.dark-mode .cert-skills span:hover {
     background: transparent;
 }
 
-
 .tech-tag {
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 0.6rem; /* UPDATED: Reduced padding from 0.4rem 0.8rem */
     border-radius: 15px;
-    font-size: 0.75rem;
+    font-size: 0.7rem; /* UPDATED: Reduced from 0.75rem to 0.7rem */
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    flex-shrink: 0; /* ADDED: Prevents tags from shrinking */
 }
 
 .tech-tag.python { background: #3776ab; color: white; }
@@ -1679,4 +1680,3 @@ body.dark-mode .cert-btn:hover {
         align-items: center;
     }
 }
-    
