@@ -630,7 +630,7 @@ export default function App() {
               <div className="portrait-shell">
                 <img
                   className="portrait-image"
-                  src={assetUrl("/images/sahil.png")}
+                  src={assetUrl("/images/sahil-photo.jpeg")}
                   alt="Sahil Addepalli portrait"
                 />
               </div>
