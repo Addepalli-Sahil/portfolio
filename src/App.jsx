@@ -208,6 +208,10 @@ const contactLinks = [
   }
 ];
 
+function assetUrl(path) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+}
+
 function Icon({ name }) {
   const common = {
     width: 18,
@@ -624,7 +628,11 @@ export default function App() {
           <div className="hero-stage" data-reveal>
             <TiltCard className="portrait-card portrait-card-clean">
               <div className="portrait-shell">
-                <img className="portrait-image" src="/images/sahil.png" alt="Sahil Addepalli portrait" />
+                <img
+                  className="portrait-image"
+                  src={assetUrl("/images/sahil.png")}
+                  alt="Sahil Addepalli portrait"
+                />
               </div>
               <div className="portrait-meta">
                 <div>
@@ -749,14 +757,21 @@ export default function App() {
                 as="a"
                 className="cert-card cert-link-card"
                 data-reveal
-                href={cert.link}
+                href={assetUrl(cert.link)}
                 key={cert.id}
                 rel="noreferrer"
                 target="_blank"
               >
                 <div className="cert-top">
                   <div className="cert-brand">
-                    <span className={`cert-mark cert-mark-${cert.tone}`}>{cert.mark}</span>
+                    <span className={`cert-logo-badge cert-logo-badge-${cert.tone}`}>
+                      <img
+                        src={assetUrl(cert.logo)}
+                        alt={`${cert.brand} logo`}
+                        className="cert-logo-image"
+                        loading="lazy"
+                      />
+                    </span>
                     <div className="cert-brand-copy">
                       <span className="cert-brand-name">{cert.brand}</span>
                       <p className="cert-issuer">{cert.issuer}</p>
