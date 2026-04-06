@@ -15,13 +15,6 @@ const navLinks = [
   { href: "#contact", label: "Contact", id: "contact" }
 ];
 
-const strengths = [
-  "Full-stack product workflows",
-  "Automation and developer tooling",
-  "Responsive front-end development",
-  "Practical software for real problems"
-];
-
 const aboutPoints = [
   "I am a 3rd-year BTech student focused on building software that feels useful, not just presentable.",
   "My projects lean toward automation, document workflows, recruitment systems, and developer productivity.",
@@ -34,7 +27,7 @@ const skillGroups = [
     title: "Programming Languages",
     summary: "Core languages I use for logic, scripting, web features, and stronger fundamentals.",
     tone: "amber",
-    items: ["Python", "JavaScript", "Java", "C++"]
+    items: ["Python", "JavaScript", "Java", "C", "C++"]
   },
   {
     title: "Frameworks and Libraries",
@@ -618,12 +611,6 @@ export default function App() {
               </a>
             </div>
 
-            <ul className="hero-strengths">
-              {strengths.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-
             <ul className="metrics">
               {metrics.map((item) => (
                 <li key={item.label}>
@@ -706,48 +693,47 @@ export default function App() {
             </p>
           </div>
 
-          <div className="skills-layout">
-            <TiltCard className="skills-intro-card" data-reveal>
-              <p className="card-kicker">Working stack</p>
-              <h3>Built through projects, not just course lists.</h3>
+          <TiltCard className="skills-overview" data-reveal>
+            <div className="skills-overview-copy">
+              <p className="card-kicker">Current toolbox</p>
+              <h3>Enough depth to build across frontend, backend, and workflow logic.</h3>
               <p>
-                Most of the tools below are things I keep returning to while building recruitment systems, document
-                workflows, automation utilities, and full-stack interfaces that need both clean logic and clear UI.
+                My strongest work usually happens where interface clarity meets practical backend logic. That is why my
+                stack leans toward Python, React, Flask, automation, and tools that help turn repetitive processes into
+                usable software.
               </p>
-
-              <div className="skills-summary-grid">
-                <div>
-                  <strong>04</strong>
-                  <span>project types explored</span>
-                </div>
-                <div>
-                  <strong>06</strong>
-                  <span>certificate-backed learning tracks</span>
-                </div>
-              </div>
-            </TiltCard>
-
-            <div className="skills-grid">
-              {skillGroups.map((group, index) => (
-                <TiltCard className={`skill-card skill-card-${group.tone}`} data-reveal key={group.title}>
-                  <div className="skill-card-top">
-                    <span className="skill-index">{String(index + 1).padStart(2, "0")}</span>
-                    <div className="skill-card-headings">
-                      <h3>{group.title}</h3>
-                      <p className="skill-summary">{group.summary}</p>
-                    </div>
-                  </div>
-
-                  <div className="skill-chip-grid">
-                    {group.items.map((item) => (
-                      <span className="skill-chip" key={item}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </TiltCard>
-              ))}
             </div>
+
+            <div className="skills-overview-tags">
+              <span>Python</span>
+              <span>React</span>
+              <span>Flask</span>
+              <span>Automation</span>
+              <span>Databases</span>
+              <span>Cybersecurity</span>
+            </div>
+          </TiltCard>
+
+          <div className="skills-grid">
+            {skillGroups.map((group, index) => (
+              <TiltCard className={`skill-card skill-card-${group.tone}`} data-reveal key={group.title}>
+                <div className="skill-card-top">
+                  <span className="skill-index">{String(index + 1).padStart(2, "0")}</span>
+                  <div className="skill-card-headings">
+                    <h3>{group.title}</h3>
+                    <p className="skill-summary">{group.summary}</p>
+                  </div>
+                </div>
+
+                <div className="skill-chip-grid">
+                  {group.items.map((item) => (
+                    <span className="skill-chip" key={item}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </TiltCard>
+            ))}
           </div>
         </section>
 
