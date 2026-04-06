@@ -1,0 +1,9 @@
+node_modules
+dist
+.vite
+vite.stdout.log
+vite.stderr.log
+images
+certificates
+script.js
+style.css
