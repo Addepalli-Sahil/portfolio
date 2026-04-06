@@ -3,7 +3,10 @@ dist
 .vite
 vite.stdout.log
 vite.stderr.log
-images
-certificates
-script.js
-style.css
+/images
+/certificates
+/script.js
+/style.css
+/.publish-temp
+/.publish-temp-2
+/.publish-temp-3
