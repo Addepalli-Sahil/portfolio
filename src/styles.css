@@ -1094,61 +1094,24 @@ h3 {
 }
 
 .certificate-page {
-  width: min(calc(100% - 2rem), 1100px);
+  position: fixed;
+  inset: 0;
+  width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 1.25rem 0 2rem;
-}
-
-.certificate-topbar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.4rem;
-}
-
-.certificate-copy {
-  display: grid;
-  gap: 0.7rem;
-  max-width: 40rem;
-}
-
-.certificate-copy h1 {
-  max-width: 10ch;
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
-}
-
-.certificate-copy p,
-.certificate-fallback {
   margin: 0;
-  color: var(--muted);
-  line-height: 1.72;
-}
-
-.certificate-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
-
-.certificate-frame-card {
-  margin-top: 1rem;
-  padding: 0.85rem;
+  padding: 0;
+  overflow: hidden;
+  background: #0d1117;
 }
 
 .certificate-frame {
   display: block;
   width: 100%;
-  min-height: clamp(30rem, 76vh, 62rem);
+  height: 100vh;
+  min-height: 100vh;
   border: 0;
-  border-radius: 22px;
-  background: #09111c;
-}
-
-.certificate-fallback {
-  margin-top: 0.9rem;
-  font-size: 0.95rem;
+  border-radius: 0;
+  background: #ffffff;
 }
 
 .footer {
@@ -1270,19 +1233,6 @@ h3 {
     align-items: flex-start;
   }
 
-  .certificate-page {
-    width: min(calc(100% - 1rem), 1100px);
-    padding-top: 0.9rem;
-  }
-
-  .certificate-topbar {
-    padding: 1.15rem;
-  }
-
-  .certificate-frame-card {
-    padding: 0.65rem;
-  }
-
   .ambient-grid {
     background-size: 46px 46px;
   }
@@ -1305,8 +1255,7 @@ h3 {
   .cert-card,
   .project-card,
   .featured-project,
-  .contact-card,
-  .certificate-topbar {
+  .contact-card {
     padding: 1.2rem;
   }
 
@@ -1319,7 +1268,8 @@ h3 {
   }
 
   .certificate-frame {
-    min-height: 70vh;
+    height: 100dvh;
+    min-height: 100dvh;
   }
 }
 
