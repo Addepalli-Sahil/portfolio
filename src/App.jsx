@@ -212,6 +212,10 @@ function assetUrl(path) {
   return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 }
 
+function certificateViewerUrl(certificateId) {
+  return assetUrl(`/?certificate=${certificateId}`);
+}
+
 function Icon({ name }) {
   const common = {
     width: 18,
@@ -459,8 +463,51 @@ function AmbientCanvas() {
   return <canvas ref={canvasRef} className="ambient-canvas" aria-hidden="true" />;
 }
 
+function CertificateViewer({ certificate }) {
+  const pdfUrl = assetUrl(certificate.link);
+
+  return (
+    <div className="certificate-page">
+      <header className="certificate-topbar tilt-card">
+        <div className="certificate-copy">
+          <p className="eyebrow">Certificate Viewer</p>
+          <h1>{certificate.title}</h1>
+          <p>
+            {certificate.brand} certificate opened in a separate tab so mobile browsers can show a preview page first
+            instead of jumping straight into the raw PDF download flow.
+          </p>
+        </div>
+
+        <div className="certificate-actions">
+          <a className="button button-secondary" href={assetUrl("/#certifications")}>
+            Back to Portfolio
+          </a>
+          <a className="button button-primary" href={pdfUrl} rel="noreferrer" target="_blank">
+            Open PDF Directly
+          </a>
+        </div>
+      </header>
+
+      <section className="certificate-frame-card tilt-card">
+        <iframe
+          className="certificate-frame"
+          loading="eager"
+          src={`${pdfUrl}#view=FitH`}
+          title={`${certificate.title} certificate`}
+        />
+        <p className="certificate-fallback">
+          If the preview is blocked on your browser, use the direct open button above.
+        </p>
+      </section>
+    </div>
+  );
+}
+
 export default function App() {
   const headerRef = useRef(null);
+  const searchParams = typeof window === "undefined" ? null : new URLSearchParams(window.location.search);
+  const certificateId = searchParams?.get("certificate");
+  const activeCertificate = certificateId ? certifications.find((cert) => cert.id === certificateId) : null;
 
   useEffect(() => {
     const root = document.documentElement;
@@ -564,6 +611,10 @@ export default function App() {
 
   const featuredProject = projects[0];
   const secondaryProjects = projects.slice(1);
+
+  if (activeCertificate) {
+    return <CertificateViewer certificate={activeCertificate} />;
+  }
 
   return (
     <div className="site-shell">
@@ -757,7 +808,7 @@ export default function App() {
                 as="a"
                 className="cert-card cert-link-card"
                 data-reveal
-                href={assetUrl(cert.link)}
+                href={certificateViewerUrl(cert.id)}
                 key={cert.id}
                 rel="noreferrer"
                 target="_blank"

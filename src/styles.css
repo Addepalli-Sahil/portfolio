@@ -32,6 +32,12 @@ html {
   scroll-padding-top: 5.9rem;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -69,6 +75,12 @@ a,
 .site-shell {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
+}
+
+main {
+  overflow-x: clip;
 }
 
 .ambient-stage {
@@ -212,6 +224,38 @@ a,
   display: flex;
   gap: 0.65rem;
   flex-wrap: wrap;
+}
+
+.brand,
+.brand-copy,
+.nav,
+.section-heading,
+.hero-copy,
+.hero-stage,
+.skill-card-top,
+.skill-card-headings,
+.cert-brand,
+.cert-brand-copy,
+.featured-copy,
+.featured-side,
+.contact-links a,
+.contact-copy,
+.footer-links-rich a,
+.certificate-copy {
+  min-width: 0;
+}
+
+.brand-copy strong,
+.hero-role,
+.hero-text,
+.skill-summary,
+.cert-issuer,
+.cert-description,
+.contact-copy span,
+.footer-links-rich span,
+.certificate-copy p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .nav a,
@@ -1003,6 +1047,7 @@ h3 {
 }
 
 .contact-links a {
+  width: 100%;
   padding: 1rem 1.1rem;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
@@ -1045,6 +1090,64 @@ h3 {
 
 .contact-copy span {
   color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.certificate-page {
+  width: min(calc(100% - 2rem), 1100px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1.25rem 0 2rem;
+}
+
+.certificate-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem;
+}
+
+.certificate-copy {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 40rem;
+}
+
+.certificate-copy h1 {
+  max-width: 10ch;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+}
+
+.certificate-copy p,
+.certificate-fallback {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.certificate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.certificate-frame-card {
+  margin-top: 1rem;
+  padding: 0.85rem;
+}
+
+.certificate-frame {
+  display: block;
+  width: 100%;
+  min-height: clamp(30rem, 76vh, 62rem);
+  border: 0;
+  border-radius: 22px;
+  background: #09111c;
+}
+
+.certificate-fallback {
+  margin-top: 0.9rem;
   font-size: 0.95rem;
 }
 
@@ -1113,6 +1216,22 @@ h3 {
     top: 0;
   }
 
+  .nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
+  }
+
   .section {
     padding: 3.2rem 0;
   }
@@ -1142,6 +1261,28 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .hero-stage {
+    width: min(100%, 21rem);
+    justify-self: center;
+  }
+
+  .contact-links a {
+    align-items: flex-start;
+  }
+
+  .certificate-page {
+    width: min(calc(100% - 1rem), 1100px);
+    padding-top: 0.9rem;
+  }
+
+  .certificate-topbar {
+    padding: 1.15rem;
+  }
+
+  .certificate-frame-card {
+    padding: 0.65rem;
+  }
+
   .ambient-grid {
     background-size: 46px 46px;
   }
@@ -1149,6 +1290,36 @@ h3 {
   .footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar,
+  .section,
+  .footer {
+    width: min(calc(100% - 1rem), var(--max-width));
+  }
+
+  .about-card,
+  .skill-card,
+  .cert-card,
+  .project-card,
+  .featured-project,
+  .contact-card,
+  .certificate-topbar {
+    padding: 1.2rem;
+  }
+
+  .metrics li {
+    min-width: 100%;
+  }
+
+  .cert-description {
+    min-height: 0;
+  }
+
+  .certificate-frame {
+    min-height: 70vh;
   }
 }
 
